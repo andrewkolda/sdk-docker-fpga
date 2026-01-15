@@ -132,10 +132,12 @@ publish() {
     	tag_variation "${TAG_NAME}" "pocket"
     elif [ "${VERSION}" = "21.1" ]; then
     	tag_variation "${TAG_NAME}" "21.1.1"
-	elif [ "${VERSION}" = "22.1" ]; then
+    elif [ "${VERSION}" = "22.1" ]; then
     	tag_variation "${TAG_NAME}" "22.1.1"
-	elif [ "${VERSION}" = "23.1" ]; then
+    elif [ "${VERSION}" = "23.1" ]; then
     	tag_variation "${TAG_NAME}" "23.1"
+    elif [ "${VERSION}" = "25.1" ]; then
+    	tag_variation "${TAG_NAME}" "25.1"
     fi
 	echo "Done."
 }
@@ -167,10 +169,12 @@ publish_to_github() {
     	tag_variation "${GIT_TAG_NAME}" "pocket"
     elif [ "${VERSION}" = "21.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "21.1.1"
-	elif [ "${VERSION}" = "22.1" ]; then
+    elif [ "${VERSION}" = "22.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "22.1.1"
-	elif [ "${VERSION}" = "23.1" ]; then
+    elif [ "${VERSION}" = "23.1" ]; then
     	tag_variation "${GIT_TAG_NAME}" "23.1"
+    elif [ "${VERSION}" = "25.1" ]; then
+    	tag_variation "${GIT_TAG_NAME}" "25.1"
     fi
 	echo "Done."
 }
@@ -204,11 +208,11 @@ download() {
 		"17.1")
 			echo "Downloading v17.1.1.593"
 			fileArray[0]="17.1std/590/ib_installers/QuartusLiteSetup-17.1.0.590-linux.run"
-            fileArray[1]="17.1std/590/ib_installers/cyclone-17.1.0.590.qdz"
-            fileArray[2]="17.1std/590/ib_installers/cyclonev-17.1.0.590.qdz"
-            fileArray[3]="17.1std/590/ib_installers/cyclone10lp-17.1.0.590.qdz"
-            fileArray[4]="17.1std/590/ib_installers/max10-17.1.0.590.qdz"
-            fileArray[5]="17.1std.1/593/update/QuartusSetup-17.1.1.593-linux.run"
+            		fileArray[1]="17.1std/590/ib_installers/cyclone-17.1.0.590.qdz"
+			fileArray[2]="17.1std/590/ib_installers/cyclonev-17.1.0.590.qdz"
+			fileArray[3]="17.1std/590/ib_installers/cyclone10lp-17.1.0.590.qdz"
+			fileArray[4]="17.1std/590/ib_installers/max10-17.1.0.590.qdz"
+			fileArray[5]="17.1std.1/593/update/QuartusSetup-17.1.1.593-linux.run"
 			;;
 		"18.1")
 			echo "Downloading v18.1.1.646"
@@ -222,26 +226,26 @@ download() {
 		"19.1")
 			echo "Downloading v19.1.0.670"
 			fileArray[0]="19.1std/670/ib_installers/QuartusLiteSetup-19.1.0.670-linux.run"
-            fileArray[1]="19.1std/670/ib_installers/cyclone-19.1.0.670.qdz"
-            fileArray[2]="19.1std/670/ib_installers/cyclonev-19.1.0.670.qdz"
-            fileArray[3]="19.1std/670/ib_installers/cyclone10lp-19.1.0.670.qdz"
-            fileArray[4]="19.1std/670/ib_installers/max10-19.1.0.670.qdz"
+			fileArray[1]="19.1std/670/ib_installers/cyclone-19.1.0.670.qdz"
+			fileArray[2]="19.1std/670/ib_installers/cyclonev-19.1.0.670.qdz"
+			fileArray[3]="19.1std/670/ib_installers/cyclone10lp-19.1.0.670.qdz"
+			fileArray[4]="19.1std/670/ib_installers/max10-19.1.0.670.qdz"
 			;;
 		"20.1")
 			echo "Downloading v20.1.0.711"
 			fileArray[0]="20.1std/711/ib_installers/QuartusLiteSetup-20.1.0.711-linux.run"
-            fileArray[1]="20.1std/711/ib_installers/cyclone-20.1.0.711.qdz"
-            fileArray[2]="20.1std/711/ib_installers/cyclonev-20.1.0.711.qdz"
-            fileArray[3]="20.1std/711/ib_installers/cyclone10lp-20.1.0.711.qdz"
-            fileArray[4]="20.1std/711/ib_installers/max10-20.1.0.711.qdz"
+			fileArray[1]="20.1std/711/ib_installers/cyclone-20.1.0.711.qdz"
+			fileArray[2]="20.1std/711/ib_installers/cyclonev-20.1.0.711.qdz"
+			fileArray[3]="20.1std/711/ib_installers/cyclone10lp-20.1.0.711.qdz"
+			fileArray[4]="20.1std/711/ib_installers/max10-20.1.0.711.qdz"
 			;;
 		"21.1")
 			echo "Downloading v21.1.1.850"
 			fileArray[0]="21.1std.1/850/ib_installers/QuartusLiteSetup-21.1.1.850-linux.run"
-            fileArray[1]="21.1std.1/850/ib_installers/cyclone-21.1.1.850.qdz"
-            fileArray[2]="21.1std.1/850/ib_installers/cyclone10lp-21.1.1.850.qdz"
-            fileArray[3]="21.1std.1/850/ib_installers/cyclonev-21.1.1.850.qdz"
-            fileArray[4]="21.1std.1/850/ib_installers/max10-21.1.1.850.qdz"
+			fileArray[1]="21.1std.1/850/ib_installers/cyclone-21.1.1.850.qdz"
+			fileArray[2]="21.1std.1/850/ib_installers/cyclone10lp-21.1.1.850.qdz"
+			fileArray[3]="21.1std.1/850/ib_installers/cyclonev-21.1.1.850.qdz"
+			fileArray[4]="21.1std.1/850/ib_installers/max10-21.1.1.850.qdz"
 			;;
 		"22.1")
 			echo "Downloading v22.1std.2.922"			              
@@ -258,6 +262,14 @@ download() {
 			fileArray[2]="23.1std/991/ib_installers/cyclone10lp-23.1std.0.991.qdz"
 			fileArray[3]="23.1std/991/ib_installers/cyclonev-23.1std.0.991.qdz"
 			fileArray[4]="23.1std/991/ib_installers/max10-23.1std.0.991.qdz"
+			;;
+		"25.1")
+			echo "Downloading v25.1std.1129"			              
+			fileArray[0]="25.1std/1129/ib_installers/QuartusLiteSetup-25.1std.0.1129-linux.run"
+			fileArray[1]="25.1std/1129/ib_installers/cyclone-25.1std.0.1129.qdz"
+			fileArray[2]="25.1std/1129/ib_installers/cyclone10lp-25.1std.0.1129.qdz"
+			fileArray[3]="25.1std/1129/ib_installers/cyclonev-25.1std.0.1129.qdz"
+			fileArray[4]="25.1std/1129/ib_installers/max10-25.1std.0.1129.qdz"
 			;;
 		*)   # Invalid option
 			echo "Error: Invalid Version"
