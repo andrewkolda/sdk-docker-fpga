@@ -18,7 +18,7 @@ usage() {
 	echo
 	echo "Usage: build.sh [-v] [OPTION...]"
 	echo "  -v    Quartus version to build."
-	echo "        [13.0, 13.1, 17.0, 17.1, 18.1, 19.1, 20.1, 21.1, 22.1, 23.1]"
+	echo "        [13.0, 13.1, 17.0, 17.1, 18.1, 19.1, 20.1, 21.1, 22.1, 23.1, 25.1]"
 	echo
 	echo " Main modes of operation:"
 	echo "  -b    Build container using remote files."
@@ -29,7 +29,7 @@ usage() {
 	echo "  -c    Check local files integrity."
 	echo "  -o    Build Base OS."
 	echo
-	echo " eg. build.sh -v23.1 -b"
+	echo " eg. build.sh -v25.1 -b"
 	echo "     build.sh -vbase -o"
 	echo
 }
